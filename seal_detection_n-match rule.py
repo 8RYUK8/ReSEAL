@@ -2,6 +2,10 @@
 import argparse
 import numpy as np
 
+# This script evaluates SEAL-style verification from patch-wise L2 distances.
+# It chooses a patch threshold tau from random patches, counts how many patches
+# match in each image, and then analyzes image-level detection performance by
+# sweeping the required number of matches.
 
 def roc_auc_score_manual(y_true: np.ndarray, y_score: np.ndarray) -> float:
     """
