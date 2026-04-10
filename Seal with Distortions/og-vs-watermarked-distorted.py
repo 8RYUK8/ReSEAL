@@ -6,6 +6,11 @@ import re
 import numpy as np
 import matplotlib.pyplot as plt
 
+# This script extends trimmed-mean watermark detection to support multiple image
+# distortions. It computes image-level scores by averaging the lowest beta fraction
+# of patch L2 distances, evaluates detection with a fixed threshold tau, and allows
+# analyzing specific distortions (e.g., JPEG, blur, noise) from structured NPZ files.
+# It also provides beta-sweep plots and optional single-image analysis.
 
 def roc_auc_score_manual(y_true: np.ndarray, y_score: np.ndarray) -> float:
     """
