@@ -25,6 +25,10 @@ It serves as the main location for these statistical evaluation experiments and 
 This folder contains the adversarially perturbed images generated using the adversary epsilon attack.  
 These images are used to evaluate how watermark detection behaves under adversarial perturbations.
 
+### `SEAL with Distortions`
+This folder contains the analysis scripts and images that underwent distortions, these include: Blur, Brightness, JPEG Compression ... .
+
+
 ---
 
 ## Script Overview
