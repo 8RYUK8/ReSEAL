@@ -5,6 +5,10 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
+# This script performs image-level watermark detection using the trimmed mean of
+# patch-wise L2 distances. For each image, it averages the lowest beta fraction
+# of patch distances, uses this value as a score, applies a fixed threshold tau
+# for classification, and visualizes the score distributions and ROC behavior.
 
 def roc_auc_score_manual(y_true: np.ndarray, y_score: np.ndarray) -> float:
     """
