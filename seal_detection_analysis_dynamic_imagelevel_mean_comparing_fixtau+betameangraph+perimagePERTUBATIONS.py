@@ -5,6 +5,10 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
+# This script analyzes image-level watermark detection by averaging the lowest-beta
+# fraction of patch-wise L2 distances per image. It evaluates separability between
+# watermarked and random images using ROC/AUC and a fixed threshold tau, and also
+# visualizes how this trimmed-mean score changes as beta varies.
 
 def roc_auc_score_manual(y_true: np.ndarray, y_score: np.ndarray) -> float:
     """
