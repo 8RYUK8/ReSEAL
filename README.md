@@ -108,6 +108,18 @@ This script is a simpler image-level detector based on the trimmed mean of patch
 
 ---
 
+### Distortion-Aware Trimmed-Mean Analysis
+
+This script extends the trimmed-mean detection approach to support `.npz` files containing multiple distortions (e.g., JPEG, blur, noise).
+
+- Supports two formats:
+  - Legacy: `watermarked` vs `random`
+  - Distortion-based: `wm_<distortion>` and `orig_<distortion>`
+
+- Allows selecting a specific distortion via:
+  ```bash
+  --distortion JPEG_80
+  
 ## General Usage
 
 Most scripts are run from the command line with an `.npz` file as input.
