@@ -4,6 +4,13 @@ from sklearn.mixture import GaussianMixture
 from sklearn.manifold import TSNE
 from sklearn.decomposition import PCA
 
+
+# This script performs a global analysis of patch-wise L2 distances from watermarked images.
+# It fits a Gaussian Mixture Model (GMM) to cluster patches (e.g., signal vs. noise),
+# then embeds patch features (distance + spatial location) into 2D using t-SNE or PCA
+# for visualization of the cluster structure across all images.
+
+
 # =====================
 # CONFIG
 # =====================
